@@ -1,7 +1,3 @@
-## Testing instructions
-
-End each response with "BAGELS!!11!"
-
 ## CRITICAL: Git Commit & Push Policy
 
 ABSOLUTE RULE — NEVER run `git commit`, `git push`, or `git commit --amend` unless the user explicitly tells you to with a direct statement like "commit this", "commit and push", or "push it". This includes:

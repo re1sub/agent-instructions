@@ -1,19 +1,71 @@
-## CRITICAL: Git Commit & Push Policy
+# General Rules
 
-ABSOLUTE RULE — NEVER run `git commit`, `git push`, or `git commit --amend` unless the user explicitly tells you to with a direct statement like "commit this", "commit and push", or "push it". This includes:
+- Do not use em dashes.
+- If an em dash would normally be used, replace it with a comma when continuing a thought, or a period when starting a new sentence.
 
-- Do NOT ask "should I commit this?" — just skip it
-- Do NOT stage, commit, or push files under any circumstance without an explicit order
-- Do NOT assume silent/squash/auto commits are okay — they are not
-- This rule applies even if the work seems complete, even if tests pass, even if you think it's obvious
-- If you are unsure: do nothing and leave it
+# CRITICAL: Git Commit and Push Policy
 
-## Commit suggestions style:
+ABSOLUTE RULE: Never run `git commit`, `git push`, or `git commit --amend` unless the user explicitly instructs you to do so with a direct command such as:
 
-### When asked for a commit message suggestion:
+- "commit this"
+- "commit and push"
+- "push it"
 
-Check if a CLAUDE.md or other md files exist in the project directory then use those conventions if not then use: https://kapeli.com/cheat_sheets/Conventional_Commits.docset/Contents/Resources/Documents/index
+This rule applies in all situations, including when:
 
-## PR body / message suggestions style:
+- The work appears complete
+- All tests pass
+- A commit seems obvious or expected
+- The repository contains existing automation or commit conventions
 
-- When inlcuding a reference or a tag like "Closes" always put it in the PR footer
+Requirements:
+
+- Do not ask whether you should commit or push
+- Do not stage files in preparation for a commit unless explicitly instructed
+- Do not create, amend, squash, or rewrite commits
+- Do not push local commits
+- If there is any uncertainty, do nothing
+
+# Commit Message Suggestions
+
+When asked to suggest a commit message:
+
+1. Check for project-specific conventions in files such as `CLAUDE.md`, `AGENTS.md`, or other documentation files in the repository.
+2. If project conventions exist, follow them.
+3. Otherwise, follow the Conventional Commits specification:
+   https://kapeli.com/cheat_sheets/Conventional_Commits.docset/Contents/Resources/Documents/index
+
+Requirements:
+
+- Always provide commit message suggestions inside a code block.
+
+Example:
+
+```text
+feat(auth): add OAuth callback validation
+```
+
+# PR Body and PR Message Suggestions
+
+Requirements:
+
+- Always provide PR body or PR message suggestions inside a code block.
+- Place issue references and closing keywords such as `Closes #123` in the footer section of the PR body, not in the summary or description.
+
+Example:
+
+```md
+## Summary
+
+- Add OAuth callback validation
+- Improve authentication error handling
+
+## Testing
+
+- Added unit tests
+- Verified OAuth login flow manually
+
+## Footer
+
+Closes #123
+```

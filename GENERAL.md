@@ -70,9 +70,9 @@ Example:
 Closes #123
 ```
 
-# PREPARE Prefix Policy
+# Prepare Prefix Policy
 
-When the user uses the "PREPARE" prefix (e.g., "PREPARE a PR that..."), you must NOT execute mutating commands such as `gh pr create`, `git commit`, `git push`, or similar. Instead, show what you WOULD do by outputting the plan as text, including:
+When the user uses the word "prepare" (any case, e.g. "prepare a PR", "PREPARE a commit"), you must NOT execute mutating commands such as `gh pr create`, `git commit`, `git push`, or similar. Instead, show what you WOULD do by outputting the plan as text, including:
 
 - The commands you would run
 - The branch name you would create
